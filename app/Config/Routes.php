@@ -95,6 +95,18 @@ $routes->group('categoria',function($routes){
     $routes->get('','CategoriaController::list');
  
 });
+$routes->group('departamento',function($routes){
+    $routes->get('list','DepartamentoController::list');
+ 
+});
+$routes->group('municipio',function($routes){
+    $routes->get('list','MunicipiosController::list');
+ 
+});
+$routes->group('pais',function($routes){
+    $routes->get('list','PaisController::list');
+ 
+});
 
 $routes->group('menu',function($routes){
     $routes->get('','MenuController::index');

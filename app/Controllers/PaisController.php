@@ -2,34 +2,33 @@
 
 namespace App\Controllers;
 
-use App\Models\DepartamentosModel;
 use App\Models\PaisModel;
 use CodeIgniter\HTTP\IncomingRequest;
 
-class DepartamentoController extends BaseController
+class MunicipioController extends BaseController
 {
     
-    protected $request,$session,$departamento,$pais;
+    protected $request,$session,$pais;
     public function __construct(){
         $this->request = \Config\Services::request();
         $this->session = \Config\Services::session();
         $this->pais = new PaisModel();
-        $this->departamento = new DepartamentosModel();
+        
         
     }
     
     public function list(){
         try {
-            $departamentos = $this->departamento->where('activo',true)->findAll();
-            if(count($departamentos)<0){
+            $pais = $this->pais->where('activo',true)->findAll();
+            if(count($pais)<0){
                 return $this->response->setStatusCode(404,'NOT FOUND')
-                ->setJSON(['message'=>'NO HAY DEPARTAMENTOS']);
+                ->setJSON(['message'=>'NO HAY PAISES']);
             }
             $rows = [];
-            foreach($departamentos  as $departamento){
+            foreach($pais  as $pais){
                 array_push($rows, [
-                    'key'=>intval($departamento['iddepartamento']),
-                    'nombre'=>$departamento['nombre']
+                    'key'=>intval($pais['idpais']),
+                    'nombre'=>$pais['nombre']
                 ]);
             }
             return $this->response->setStatusCode(200,'OK')
@@ -40,9 +39,6 @@ class DepartamentoController extends BaseController
         }
     } 
 
-    
-
-    
 
     
    
