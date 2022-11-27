@@ -36,11 +36,12 @@ class SucursalController extends BaseController
                 'keyempresa'=>intval($sucursal['idempresa']),
                 'nombre'=> $sucursal['nombre'],
                 'telefono'=>$sucursal['telefono'],
-                'keydepa'=>intval($sucursal['iddepartamento']),
-                'keymuni'=>intval($sucursal['idmunicipio']),
+                'keydepartamento'=>intval($sucursal['iddepartamento']),
+                'keymunicipio'=>intval($sucursal['idmunicipio']),
                 'direccion'=>$sucursal['direccion'],
-                'encargado'=>$sucursal['encargado'],
-                'gps'=>$sucursal['gps']
+                'direccion2'=>$sucursal['direccion2'],
+                'direccion3'=>$sucursal['direccion3'],
+                'encargado'=>$sucursal['encargado']
             ];
             return $this->response->setStatusCode(200,'OK')
             ->setJSON($row);
@@ -71,13 +72,14 @@ class SucursalController extends BaseController
                     'empresa'=>$sucursal['empresa'],
                     'nombre'=> $sucursal['nombre'],
                     'telefono'=>$sucursal['telefono'],
-                    'keydepa'=>intval($sucursal['iddepartamento']),
+                    'keydepartamento'=>intval($sucursal['iddepartamento']),
                     'departamento'=>$sucursal['departamento'],
-                    'keymuni'=>intval($sucursal['idmunicipio']),
+                    'keymunicipio'=>intval($sucursal['idmunicipio']),
                     'municipio'=>$sucursal['municipio'],
                     'direccion'=>$sucursal['direccion'],
-                    'encargado'=>$sucursal['encargado'],
-                    'gps'=>$sucursal['gps']
+                    'direccion2'=>$sucursal['direccion2'],
+                    'direccion3'=>$sucursal['direccion3'],
+                    'encargado'=>$sucursal['encargado']
                 ]);
             }
             return $this->response->setStatusCode(200,'OK')
@@ -112,13 +114,14 @@ class SucursalController extends BaseController
                     'empresa'=>$sucursal['empresa'],
                     'nombre'=> $sucursal['nombre'],
                     'telefono'=>$sucursal['telefono'],
-                    'keydepa'=>intval($sucursal['iddepartamento']),
+                    'keydepartamento'=>intval($sucursal['iddepartamento']),
                     'departamento'=>$sucursal['departamento'],
-                    'keymuni'=>intval($sucursal['idmunicipio']),
+                    'keymunicipio'=>intval($sucursal['idmunicipio']),
                     'municipio'=>$sucursal['municipio'],
                     'direccion'=>$sucursal['direccion'],
-                    'encargado'=>$sucursal['encargado'],
-                    'gps'=>$sucursal['gps']
+                    'direccion2'=>$sucursal['direccion2'],
+                    'direccion3'=>$sucursal['direccion3'],
+                    'encargado'=>$sucursal['encargado']
                 ]);
             }
             return $this->response->setStatusCode(200,'OK')
@@ -133,7 +136,7 @@ class SucursalController extends BaseController
     public function create(){
         try {
             $data = $this->request->getJSON(true);
-            $campos = ['empresa','nombre','departamento','municipio','direccion','telefono','encargado','gps'];
+            $campos = ['empresa','nombre','departamento','municipio','direccion','direccion2','direccion3','telefono','encargado'];
             $validacion = false;
             foreach($campos as $row){
                 if(!isset($data[$row])){
@@ -152,8 +155,9 @@ class SucursalController extends BaseController
                 'iddepartamento'=>$data['departamento'],
                 'idmunicipio'=>$data['municipio'],
                 'direccion'=>trim($data['direccion']),
-                'encargado'=>trim($data['encargado']),
-                'gps'=>trim($data['gps'])
+                'direccion2'=>trim($data['direccion2']),
+                'direccion3'=>trim($data['direccion3']),
+                'encargado'=>trim($data['encargado'])
             ];
             $keySucursal = $this->sucursal->insert($newSucursal);
             return $this->response->setStatusCode(201,'CREATED')
@@ -168,7 +172,7 @@ class SucursalController extends BaseController
     public function update($id){
         try {
             $data = $this->request->getJSON(true);
-            $campos =['empresa','nombre','departamento','municipio','direccion','telefono','encargado','gps'];
+            $campos = ['empresa','nombre','departamento','municipio','direccion','direccion2','direccion3','telefono','encargado'];
             $validacion = false;
             foreach($campos as $row){
                 if(!isset($data[$row])){
@@ -187,8 +191,9 @@ class SucursalController extends BaseController
                 'iddepartamento'=>$data['departamento'],
                 'idmunicipio'=>$data['municipio'],
                 'direccion'=>trim($data['direccion']),
-                'encargado'=>trim($data['encargado']),
-                'gps'=>trim($data['gps'])
+                'direccion2'=>trim($data['direccion2']),
+                'direccion3'=>trim($data['direccion3']),
+                'encargado'=>trim($data['encargado'])
             ];
            
             $this->sucursal->update($id,$sucursal);

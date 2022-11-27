@@ -10,8 +10,9 @@ const nombre = document.getElementById('nombre')
 const departamento = document.getElementById('departamentos')
 const municipio = document.getElementById('municipios')
 const direccion = document.getElementById('direccion')
+const direccion2 = document.getElementById('direccion2')
+const direccion3 = document.getElementById('direccion3')
 const encargado = document.getElementById('encargado')
-const gps = document.getElementById('gps')
 const telefono = document.getElementById('telefono')
 const btnDelete = document.getElementById('btnDelete')
 let keysucursal=null
@@ -19,8 +20,9 @@ let keysucursal=null
 const clearForm = ()=>{
     nombre.value = null
     direccion.value = null
+    direccion2.value = null
+    direccion3.value = null
     encargado.value=null
-    gps.value = null 
     telefono.value = null
     empresa.selectedIndex = "0"
     departamento.selectedIndex = "0"
@@ -29,8 +31,10 @@ const clearForm = ()=>{
 } 
 
 const validateForm = ()=>{
+    
+    const campos= ['nombre','direccion','telefono','encargado'];
     let ok = true
-    const campos= ['empresa','nombre','departamento','municipio','direccion','telefono','encargado','gps'];
+    console.log(campos)
     campos.forEach(e=>{
         let input = document.getElementById(e) 
         console.log(input)
@@ -43,6 +47,7 @@ const validateForm = ()=>{
     })
     return ok
 }
+
 
 
 const listEmpresas = async ()=>{
@@ -66,15 +71,35 @@ const listEmpresas = async ()=>{
 }
 const listDepa = async ()=>{
     try {
-        const request = await fetch('/empresa/list')
+        const request = await fetch('/departamento/list')
         const data = await request.json()
         if(request.ok){
             let html = ''
             data.forEach((e,i)=>{
                 html+=`<option value="${e.key}">${e.nombre}</option>`
             })
-            empresa.innerHTML = `<option value="0">Todas las Sucursales</option>${html}`
-            empresam.innerHTML = html
+            
+            departamento.innerHTML = html
+        }else{
+            toastr.error(data.message)
+        }
+
+    } catch (error) {
+        toastr.error(error)
+    }
+}
+const listMuni = async ()=>{
+    try {
+        const request = await fetch('/municipio/list')
+        const data = await request.json()
+        console.log(data)
+        if(request.ok){
+            let html = ''
+            data.forEach((e,i)=>{
+                html+=`<option value="${e.key}">${e.nombre}</option>`
+            })
+            
+            municipio.innerHTML = html
         }else{
             toastr.error(data.message)
         }
@@ -85,9 +110,9 @@ const listDepa = async ()=>{
 }
 
 
-const listSucursales = async ($url)=>{
+const listSucursales = async ()=>{
     try {
-        const request = await fetch($url)
+        const request = await fetch('/sucursal/list')
         let html =''
         const data = await request.json()
         if(request.ok){
@@ -96,6 +121,7 @@ const listSucursales = async ($url)=>{
                     <td>${i+1}</td>
                     <td>${r.nombre}</td>
                     <td>${r.empresa}</td>
+                    <td>${r.direccion}</td>
                     <td><button type="button" class="btn btn-warning" onClick="show(${r.key})" >Editar</button>
                     <button type="button" class="btn btn-danger" onClick="showModal(${r.key})" >Eliminar</button></td>
                 </tr>`
@@ -123,10 +149,14 @@ const createSucursal = async()=>{
         const data = {
             nombre:nombre.value.trim().toUpperCase(),
             empresa:parseInt(empresam.value),
+            departamento:parseInt(departamento.value),
+            municipio:parseInt(municipio.value),
             direccion:direccion.value.trim().toUpperCase(),
+            direccion:direccion.value.trim().toUpperCase(),
+            direccion2:direccion2.value.trim().toUpperCase(),
+            direccion3:direccion3.value.trim().toUpperCase(),
             telefono:telefono.value.trim().toUpperCase(),
-            encargado:encargado.value.trim().toUpperCase(),
-            gps:gps.value.trim()
+            encargado:encargado.value.trim().toUpperCase()
         }  
         const request = await fetch('/sucursal',{
             method:'POST',
@@ -136,6 +166,16 @@ const createSucursal = async()=>{
         if(request.ok){
             if(parseInt(empresa.value)>0){
                 listSucursales(`/sucursal/empresa/${parseInt(empresa.value)}`)
+            }else{
+                listSucursales('/sucursal/list')
+            }
+            if(parseInt(departamento.value)>0){
+                listSucursales(`/sucursal/departamento/${parseInt(departamento.value)}`)
+            }else{
+                listSucursales('/sucursal/list')
+            }
+            if(parseInt(municipio.value)>0){
+                listSucursales(`/sucursal/municipio/${parseInt(municipio.value)}`)
             }else{
                 listSucursales('/sucursal/list')
             }
@@ -159,8 +199,11 @@ const show = async (id)=>{
            nombre.value = msn.nombre
            empresam.value = msn.keyempresa
            direccion.value = msn.direccion
+           direccion2.value = msn.direccion2
+           direccion3.value = msn.direccion3
            encargado.value = msn.encargado
-           gps.value = msn.gps 
+           departamento.value = msn.keydepartamento
+           municipio.value = msn.keymunicipio 
            telefono.value = msn.telefono 
            btnCreate.style.display='none'
             btnUpdate.style.display=''
@@ -189,6 +232,16 @@ const deleteSucursal = async()=>{
             }else{
                 listSucursales('/sucursal/list')
             }
+            if(parseInt(departamento.value)>0){
+                listSucursales(`/sucursal/departamento/${parseInt(departamento.value)}`)
+            }else{
+                listSucursales('/sucursal/list')
+            }
+            if(parseInt(municipio.value)>0){
+                listSucursales(`/sucursal/municipio/${parseInt(municipio.value)}`)
+            }else{
+                listSucursales('/sucursal/list')
+            }
             modal2.modal('hide')
         }else{
             let msn = await request.json()
@@ -209,10 +262,13 @@ const updateSucursal = async ()=>{
         const data = {
             nombre:nombre.value.trim().toUpperCase(),
             empresa:parseInt(empresam.value),
+            departamento:parseInt(departamento.value),
+            municipio:parseInt(municipio.value),
             direccion:direccion.value.trim().toUpperCase(),
+            direccion2:direccion2.value.trim().toUpperCase(),
+            direccion3:direccion3.value.trim().toUpperCase(),
             telefono:telefono.value.trim().toUpperCase(),
-            encargado:encargado.value.trim().toUpperCase(),
-            gps:gps.value.trim()
+            encargado:encargado.value.trim().toUpperCase()
         }  
         const request = await fetch(`/sucursal/${keysucursal}`,{
             method:'PUT',
@@ -223,6 +279,16 @@ const updateSucursal = async ()=>{
             keysucursal=null
             if(parseInt(empresa.value)>0){
                 listSucursales(`/sucursal/empresa/${parseInt(empresa.value)}`)
+            }else{
+                listSucursales('/sucursal/list')
+            }
+            if(parseInt(departamento.value)>0){
+                listSucursales(`/sucursal/departamento/${parseInt(departamento.value)}`)
+            }else{
+                listSucursales('/sucursal/list')
+            }
+            if(parseInt(municipio.value)>0){
+                listSucursales(`/sucursal/municipio/${parseInt(municipio.value)}`)
             }else{
                 listSucursales('/sucursal/list')
             }
@@ -238,6 +304,8 @@ const updateSucursal = async ()=>{
 
 document.addEventListener("DOMContentLoaded", (event)=> {
     listEmpresas()
+    listDepa()
+    listMuni()
     listSucursales('/sucursal/list')
     btnNew.onclick = (e)=>{
         e.preventDefault()
@@ -251,6 +319,26 @@ document.addEventListener("DOMContentLoaded", (event)=> {
         const keyempresa = parseInt(e.target.value)
         if(keyempresa > 0){
             listSucursales(`/sucursal/empresa/${keyempresa}`)
+        }else{
+            listSucursales('/sucursal/list')
+        }
+        
+    }
+    departamento.onchange = (e)=>{
+        const keydepartamento = parseInt(e.target.value)
+        
+        if(keydepartamento>0){
+            listSucursales(`/sucursal/departamento/${keydepartamento}`)
+        }else{
+            listSucursales('/sucursal/list')
+        }
+        
+    }
+    municipio.onchange = (e)=>{
+        const keymunicipio = parseInt(e.target.value)
+    
+        if(keymunicipio>0){
+            listSucursales(`/sucursal/municipio/${keymunicipio}`)
         }else{
             listSucursales('/sucursal/list')
         }

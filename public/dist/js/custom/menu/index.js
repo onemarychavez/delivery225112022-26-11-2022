@@ -234,7 +234,7 @@ const listMenu = async (url)=>{
                     <td>${d.empresa}</td>
                     <td>${d.nombre}</td>
                     <td>${d.categoria}</td>
-                    <td><button type="button" id="btnUpdate" class="btn btn-primary">Editar</button></td>
+                    
                     <td><button type="button" class="btn btn-danger" onClick="EliminarItem(${d.key})"  >ELIMINAR</button></td>
                 </tr>`
             })

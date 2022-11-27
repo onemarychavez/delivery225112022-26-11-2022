@@ -30,6 +30,7 @@
                             <th>#</th>
                             <th>Nombre de Sucursal</th>
                             <th>Empresa</th>
+                            <th>Dirección</th>
                             <th>Opciones</th>
                         </tr>
                     </thead>
@@ -89,25 +90,35 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <label>Encargado</label>
-                            <input type="text" class="form-control" id="encargado"  />
+                            <label>Direccion 2 (opcional)</label>
+                            <input type="text" class="form-control" id="direccion2"  />
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label>Ubicacion</label>
-                                <input type="text" class="form-control" id="gps"  />
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label>telefono</label>
-                                <input type="text" class="form-control" id="telefono"  />
-                            </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label>Direccion 3 (opcional)</label>
+                            <input type="text" class="form-control" id="direccion3"  />
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Encargado</label>
+                            <input type="text" class="form-control" id="encargado"  />
+                        </div>
+                    </div>
+                
+                        
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>telefono</label>
+                            <input type="text" class="form-control" id="telefono"  />
+                        </div>
+                    </div>
+                </div>
                     
             </div>
             <div class="modal-footer">
