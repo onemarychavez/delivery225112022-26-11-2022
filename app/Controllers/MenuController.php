@@ -27,7 +27,7 @@ class MenuController extends BaseController
     
     public function index()
     {   
-        if(!$this->session->has('usuario')){
+        if(!$this->session->has('idusuarioapp')){
             return redirect()->to('');
         }
         return view('menu/index');
@@ -126,14 +126,15 @@ class MenuController extends BaseController
         ])->findAll();
         
         $men =[];
-
+        
+        $routa_img = getenv('MENU_URL');
         foreach($menu as $item){
             array_push($men,[
                 'keymenu'=>intval($item['idmenu']),
                 'key'=>intval($item['idmenudetalle']),
                 'nombre'=>$item['nombre'],
                 'precio'=>floatval($item['precio']),
-                'foto'=>$item['foto'],
+                'foto'=>$routa_img.'/'.$item['foto'],
                 'extras'=>json_decode($item['extras']),
                 'descripcion'=>$item['descripcion']
             ]);

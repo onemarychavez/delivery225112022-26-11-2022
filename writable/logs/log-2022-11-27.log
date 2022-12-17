@@ -28,3 +28,163 @@ Stack trace:
 #9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
 #10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
 #11 {main}
+ERROR - 2022-11-27 16:28:07 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'delivery', 3306, '', 0)
+#1 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\app\Controllers\EmpresaController.php(114): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(898): App\Controllers\EmpresaController->list()
+#8 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpresaController))
+#9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\app\Controllers\EmpresaController.php(114): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(898): App\Controllers\EmpresaController->list()
+#7 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpresaController))
+#8 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
+#11 {main}
+ERROR - 2022-11-27 16:28:12 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'delivery', 3306, '', 0)
+#1 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\app\Controllers\DepartamentoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(898): App\Controllers\DepartamentoController->list()
+#8 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartamentoController))
+#9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\app\Controllers\DepartamentoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(898): App\Controllers\DepartamentoController->list()
+#7 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartamentoController))
+#8 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
+#11 {main}
+ERROR - 2022-11-27 16:28:18 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'delivery', 3306, '', 0)
+#1 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\app\Controllers\MunicipiosController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(898): App\Controllers\MunicipiosController->list()
+#8 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+#9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\app\Controllers\MunicipiosController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(898): App\Controllers\MunicipiosController->list()
+#7 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+#8 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
+#11 {main}
+ERROR - 2022-11-27 16:28:23 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'delivery', 3306, '', 0)
+#1 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `sucursa...', Array, false)
+#4 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\app\Controllers\SucursalController.php(62): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(898): App\Controllers\SucursalController->list()
+#8 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SucursalController))
+#9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `sucursa...', Array, false)
+#3 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\app\Controllers\SucursalController.php(62): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(898): App\Controllers\SucursalController->list()
+#7 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SucursalController))
+#8 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
+#11 {main}
+ERROR - 2022-11-27 16:28:38 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'delivery', 3306, '', 0)
+#1 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\app\Controllers\CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#8 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriaController))
+#9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\app\Controllers\CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#7 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriaController))
+#8 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\HP\Desktop\tesina-29-10-2022\delivery225112022-26-11-2022\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\HP\\Des...')
+#11 {main}

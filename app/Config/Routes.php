@@ -35,19 +35,25 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/','VentaController::index');
-$routes->get('/restaurante','RestauranteController::index');
-$routes->get('/restaurante/menu','MenuClienteController::index');
-$routes->get('home', 'Home::index');
-$routes->group('login',function($routes){
+$routes->get('home','VentaController::index');
+$routes->get('restaurante','RestauranteController::index');
+$routes->get('restaurante/menu','MenuClienteController::index');
+
+$routes->group('/',function($routes){
     $routes->get('','LoginController::index');
     $routes->post('','LoginController::login');
-    //$routes->get('','ClientesController::index');
- 
+   
 });
-$routes->group('registrar',function($routes){
-    $routes->get('','RegistrarController::index');
-    $routes->post('','RegistrarController::create');
+$routes->group('pedido',function($routes){
+    $routes->get('','PedidoController::index');
+    $routes->post('','PedidoController::createPedido');
+    $routes->get('(:num)','PedidoController::getPedido/$1');
+    $routes->get('list','PedidoController::list');
+    $routes->put('(:num)','PedidoController::updatePedido/$1');
+    $routes->delete('(:num)','PedidoController::deletePedido/$1');
+    $routes->post('detalle','PedidoDetalleController::create');
+    $routes->put('detalle/(:num)','PedidoDetalleController::update/$1');
+    $routes->delete('detalle/(:num)','PedidoDetalleController::delete/$1');
 });
 
 
@@ -61,15 +67,10 @@ $routes->group('empresa',function($routes){
     $routes->delete('(:num)','EmpresaController::delete/$1');
 });
 
-$routes->group('usuario',function($routes){
-    $routes->get('','UsuariosController::index');
-    $routes->get('list','UsuariosController::list');
-    $routes->get('(:num)','UsuariosController::listById/$1');
-    $routes->post('','UsuariosController::create');
-    $routes->put('(:num)','UsuariosController::update/$1');
-    $routes->delete('(:num)','UsuariosController::delete/$1');
+$routes->group('registrar',function($routes){
+    $routes->get('','RegistrarController::index');
+    $routes->post('','RegistrarController::create');
 });
-
 
 
 $routes->group('sucursal',function($routes){
@@ -82,31 +83,13 @@ $routes->group('sucursal',function($routes){
     $routes->delete('(:num)','SucursalController::delete/$1');
 });
 
-$routes->group('repartidor',function($routes){
-    $routes->get('','RepartidorController::index');
-    $routes->get('list','RepartidorController::list');
-    $routes->get('(:num)','RepartidorController::listById/$1');
-    $routes->post('','RepartidorController::create');
-    $routes->put('(:num)','RepartidorController::update/$1');
-    $routes->delete('(:num)','RepartidorController::delete/$1');
-}); 
 
 $routes->group('categoria',function($routes){
     $routes->get('','CategoriaController::list');
  
 });
-$routes->group('departamento',function($routes){
-    $routes->get('list','DepartamentoController::list');
- 
-});
-$routes->group('municipio',function($routes){
-    $routes->get('list','MunicipiosController::list');
- 
-});
-$routes->group('pais',function($routes){
-    $routes->get('list','PaisController::list');
- 
-});
+
+
 
 $routes->group('menu',function($routes){
     $routes->get('','MenuController::index');
@@ -117,9 +100,7 @@ $routes->group('menu',function($routes){
     $routes->delete('(:num)','MenuController::delete/$1');
 }); 
 
-$routes->group('rol',function($routes){
-    $routes->get('list','RolesController::list');
-});
+
 
 
 

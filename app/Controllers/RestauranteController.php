@@ -28,7 +28,9 @@ class RestauranteController extends BaseController
     
     public function index()
     {   
-        
+        if(!$this->session->has('idusuarioapp')){
+            return redirect()->to('');
+        }
         return view('venta/empresas/index');
     }
 

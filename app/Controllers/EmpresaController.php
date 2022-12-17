@@ -27,7 +27,7 @@ class EmpresaController extends BaseController
     
     public function index()
     {   
-        if(!$this->session->has('usuario')){
+        if(!$this->session->has('idusuarioapp')){
             return redirect()->to('');
         }
         return view('empresa/index');
@@ -40,7 +40,7 @@ class EmpresaController extends BaseController
                 return $this->response->setStatusCode(404,'NOT FOUND')
                 ->setJSON(['message'=>'NO SE ENCONTRO EMPRESA']);
             }
-            $baseurl = getenv('app.baseURL',true);
+            $baseurl = getenv('MENU_URL',true);
             $rows = [
                     'key'=>intval($empresa['idempresa']),
                     'nombre'=>$empresa['nombre'],
@@ -75,7 +75,7 @@ class EmpresaController extends BaseController
                 ->setJSON(['message'=>'NO HAY EMPRESAS']);
             }    
             $rows = [];
-            $baseurl = getenv('app.baseURL',true);
+            $baseurl = getenv('MENU_URL',true);
             foreach($empresas  as $row){
                 array_push($rows,[
                     'key'=>intval($row['idempresa']),
@@ -117,7 +117,7 @@ class EmpresaController extends BaseController
                 ->setJSON(['message'=>'NO HAY EMPRESAS']);
             }
             $rows = [];
-            $baseurl = getenv('app.baseURL',true);
+            $baseurl = getenv('MENU_URL',true);
             foreach($empresas  as $row){
                 array_push($rows,[
                     'key'=>intval($row['idempresa']),

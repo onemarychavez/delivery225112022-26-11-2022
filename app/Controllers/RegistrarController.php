@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\UsuariosAppModel;
 use App\Models\UsuariosModel;
 use CodeIgniter\HTTP\IncomingRequest;
 
@@ -17,14 +18,14 @@ class RegistrarController extends BaseController
         $config->blockSize = getenv('encryption.blockSize');
         $config->digest = getenv('encryption.digest');        
         $this->request = \Config\Services::request();
-        $this->registrar = new UsuariosModel();
+        $this->registrar = new UsuariosAppModel();
         $this->encrypt = \Config\Services::encrypter($config);
         $this->session = \Config\Services::session();
     }
     
     public function index()
     {
-        return view('registrar/index');
+        return view('venta/registrarse/index');
     }
 
     public function list(){
@@ -91,7 +92,7 @@ class RegistrarController extends BaseController
 
     public function create(){
         try {
-            $obligatorios = ['nombres','apellidos','dui','nit','usuario','clave','rol'];
+            $obligatorios = ['nombres','apellidos','direccion','telefono','usuario','clave','direccion','correo'];
             $datos = $this->request->getJSON(true);
             $error = false;
             foreach($obligatorios as $camp){
@@ -114,11 +115,12 @@ class RegistrarController extends BaseController
             $newUsuario = [
                 'nombres'=> trim($datos['nombres']),
                 'apellidos'=> trim($datos['apellidos']),
-                'dui'=>trim($datos['dui']),
-                'nit'=>trim($datos['nit']),
+                'direccion'=>trim($datos['direccion']),
+                'telefono'=>trim($datos['telefono']),
                 'usuario'=>trim($datos['usuario']),
                 'clave'=>base64_encode($this->encrypt->encrypt(trim($datos['clave']))),
-                'idrol'=> $datos['rol']
+                'correo'=>trim($datos['correo']),
+                'idrol'=> 1
             ];
 
             $iduser = $this->registrar->insert($newUsuario);

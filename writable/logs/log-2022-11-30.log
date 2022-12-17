@@ -1,0 +1,150 @@
+ERROR - 2022-11-30 19:19:29 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/merino/Documentos/delivery/delivery/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/merino/Documentos/delivery/delivery/system/Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/merino/Documentos/delivery/delivery/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#6 /home/merino/Documentos/delivery/delivery/app/Controllers/CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#7 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#8 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController()
+#9 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/merino/Documentos/delivery/delivery/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /home/merino/Documentos/delivery/delivery/system/Commands/Server/rewrite.php(43): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/merino/Documentos/delivery/delivery/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /home/merino/Documentos/delivery/delivery/system/Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/merino/Documentos/delivery/delivery/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#5 /home/merino/Documentos/delivery/delivery/app/Controllers/CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#6 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#7 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController()
+#8 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/merino/Documentos/delivery/delivery/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /home/merino/Documentos/delivery/delivery/system/Commands/Server/rewrite.php(43): require_once('...')
+#11 {main}
+ERROR - 2022-11-30 19:20:13 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/merino/Documentos/delivery/delivery/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/merino/Documentos/delivery/delivery/system/Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/merino/Documentos/delivery/delivery/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#6 /home/merino/Documentos/delivery/delivery/app/Controllers/CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#7 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#8 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController()
+#9 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/merino/Documentos/delivery/delivery/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /home/merino/Documentos/delivery/delivery/system/Commands/Server/rewrite.php(43): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/merino/Documentos/delivery/delivery/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /home/merino/Documentos/delivery/delivery/system/Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/merino/Documentos/delivery/delivery/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#5 /home/merino/Documentos/delivery/delivery/app/Controllers/CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#6 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#7 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController()
+#8 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/merino/Documentos/delivery/delivery/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /home/merino/Documentos/delivery/delivery/system/Commands/Server/rewrite.php(43): require_once('...')
+#11 {main}
+ERROR - 2022-11-30 19:20:18 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/merino/Documentos/delivery/delivery/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/merino/Documentos/delivery/delivery/system/Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/merino/Documentos/delivery/delivery/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#6 /home/merino/Documentos/delivery/delivery/app/Controllers/CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#7 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#8 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController()
+#9 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/merino/Documentos/delivery/delivery/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /home/merino/Documentos/delivery/delivery/system/Commands/Server/rewrite.php(43): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/merino/Documentos/delivery/delivery/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /home/merino/Documentos/delivery/delivery/system/Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/merino/Documentos/delivery/delivery/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#5 /home/merino/Documentos/delivery/delivery/app/Controllers/CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#6 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#7 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController()
+#8 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/merino/Documentos/delivery/delivery/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /home/merino/Documentos/delivery/delivery/system/Commands/Server/rewrite.php(43): require_once('...')
+#11 {main}
+ERROR - 2022-11-30 19:21:04 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/merino/Documentos/delivery/delivery/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/merino/Documentos/delivery/delivery/system/Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/merino/Documentos/delivery/delivery/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#6 /home/merino/Documentos/delivery/delivery/app/Controllers/CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#7 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#8 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController()
+#9 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/merino/Documentos/delivery/delivery/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /home/merino/Documentos/delivery/delivery/system/Commands/Server/rewrite.php(43): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/merino/Documentos/delivery/delivery/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /home/merino/Documentos/delivery/delivery/system/Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/merino/Documentos/delivery/delivery/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#5 /home/merino/Documentos/delivery/delivery/app/Controllers/CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#6 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#7 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController()
+#8 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/merino/Documentos/delivery/delivery/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /home/merino/Documentos/delivery/delivery/system/Commands/Server/rewrite.php(43): require_once('...')
+#11 {main}
+ERROR - 2022-11-30 19:21:06 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/merino/Documentos/delivery/delivery/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/merino/Documentos/delivery/delivery/system/Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/merino/Documentos/delivery/delivery/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#6 /home/merino/Documentos/delivery/delivery/app/Controllers/CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#7 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#8 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController()
+#9 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/merino/Documentos/delivery/delivery/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /home/merino/Documentos/delivery/delivery/system/Commands/Server/rewrite.php(43): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/merino/Documentos/delivery/delivery/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/merino/Documentos/delivery/delivery/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/merino/Documentos/delivery/delivery/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /home/merino/Documentos/delivery/delivery/system/Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/merino/Documentos/delivery/delivery/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#5 /home/merino/Documentos/delivery/delivery/app/Controllers/CategoriaController.php(25): CodeIgniter\BaseModel->findAll()
+#6 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(898): App\Controllers\CategoriaController->list()
+#7 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController()
+#8 /home/merino/Documentos/delivery/delivery/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/merino/Documentos/delivery/delivery/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /home/merino/Documentos/delivery/delivery/system/Commands/Server/rewrite.php(43): require_once('...')
+#11 {main}

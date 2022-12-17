@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<?php echo base_url('dist/css/adminlte.min.css')?>">
     <link rel="stylesheet" href="<?php echo base_url('plugins/toastr/toastr.min.css')?>">
 </head>
-<body class="hold-transition login-page" >
+<body class="hold-transition login-page " >
     <div class="row align-items-center">
         <div class="col-12 pt-4">
             <div class="card card-outline card-warning">
@@ -22,8 +22,8 @@
                         <div class="text-center">
                             <img class="rounded" width="100" height="100" src="<?php echo base_url('dist/img/logo1.jpg') ?>" alt="Card image">
                         </div>
-                        <h2 class="fw-bold text-center mt-2">Iniciar Sesi&oacute;n</h2>
-                        <p class="login-box-msg">Hola! Bienvenido somos tu mejor opci&oacute;n</p>
+                        <h2 class="fw-bold text-center mt-2">OYE!</h2>
+                        <p class="login-box-msg">Hola! Bienvenido somos tu mejor opci&oacute;n </p>
 
                         <form action="#" >
                             <div class="input-group mb-3">
@@ -44,11 +44,11 @@
                             </div>
                             <div class="row">
                             <!-- /.col -->
-                            <div class="col-12">
+                            <div class="col-12 mb-3">
                                 <button type="button" id="btnlogin" class="btn btn-warning btn-block">Ingresar</button>
                             </div>
                             <!-- /.col -->
-                            <div class="col-12">
+                            <div class="col-12 mb-3">
                                 <a type="button" id="btnNew" href="<?= base_url()?>/registrar" class="btn btn-success btn-block">Registrarse</a>
                             </div>
                             </div>

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\UsuariosModel;
+use App\Models\UsuariosAppModel;
 use CodeIgniter\HTTP\IncomingRequest;
 
 class LoginController extends BaseController
@@ -17,7 +17,7 @@ class LoginController extends BaseController
         $config->blockSize = getenv('encryption.blockSize');
         $config->digest = getenv('encryption.digest');        
         $this->request = \Config\Services::request();
-        $this->usuario = new UsuariosModel();
+        $this->usuario = new UsuariosAppModel();
         $this->encrypt = \Config\Services::encrypter($config);
         $this->session = \Config\Services::session();
     }

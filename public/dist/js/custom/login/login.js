@@ -8,7 +8,7 @@ toastr.options.closeEasing = 'swing';
 const validateCredentials = async ()=>{
     try {
 
-        const request = await fetch('login',{
+        const request = await fetch('/',{
             method:'POST',
             body:JSON.stringify({
                 usuario:usuario.value.trim(),
@@ -16,7 +16,7 @@ const validateCredentials = async ()=>{
             })
         })
         if(request.ok){
-            window.location.href = '/'
+            window.location.href = '/home'
         }else{
             let msg = await request.json()
             toastr.error(msg.message)

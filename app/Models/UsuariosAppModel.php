@@ -15,7 +15,8 @@ class UsuariosAppModel extends Model{
         'direccion',
         'telefono',
         'idrol',
-        'activo'
+        'activo',
+        'correo'
     ];
     protected $skipValidation = true;
 }
